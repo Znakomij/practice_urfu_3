@@ -1,0 +1,179 @@
+/* Основной стиль */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0;
+    background: url('/static/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Шапка */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #FFD700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #FFD700;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #FFD700;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    justify-content: space-between; 
+}
+
+form div {
+    flex: 1 1 100%; 
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+form label {
+    flex: 0 0 150px; 
+    color: #FFD700; 
+    text-align: right; 
+}
+
+form input, form textarea {
+    flex: 1; 
+    padding: 10px;
+    font-size: 0.8em; 
+    font-family: 'Arial', sans-serif; 
+    color: #000; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form textarea {
+    resize: none; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 15px; 
+}
+
+form button {
+    background: #FFD700; 
+    color: #000; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #FFC107; 
+}
+
+.generated-text {
+    font-size: 1.2em; 
+    margin-top: 10px;
+}
+
+
+/* Нижняя часть страницы */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    margin-top: auto;
+}
+
+/* О Нас. Информация о членах команды и их ролях*/
+.team-info-title {
+    font-size: 1.1em; 
+	color: #FFD700;
+    margin-bottom: 10px; 
+}
+
+/* Таблица команды */
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em; /* Размер шрифта */
+    font-family: Arial, sans-serif; /* Шрифт текста внутри таблицы */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333; /* Цвет текста */
+}
+
+.team-table thead {
+    background-color: #333;
+    color: #fff;
+    font-family: Verdana, sans-serif; /* Шрифт для заголовка таблицы */
+    font-size: 1.1em; /* Увеличенный размер шрифта для заголовка */
+}
+
+.team-table th,
+.team-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.team-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.team-table tbody tr:hover {
+    background-color: #f1f1f1;
+}

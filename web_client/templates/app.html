@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <h2>Приложение</h2>
+    <form method="post">
+        <div>
+            <label for="category">Рубрика:</label>
+            <input type="text" id="category" name="category" placeholder="Например, кафе" required>
+        </div>
+
+        <div>
+            <label for="rating">Рейтинг (1-5):</label>
+            <input type="number" id="rating" name="rating" placeholder="Введите рейтинг от 1 до 5" min="1" max="5" required>
+        </div>
+
+        <div>
+            <label for="keywords">Ключевые слова:</label>
+            <textarea id="keywords" name="keywords" placeholder="Введите ключевые слова, разделяя их запятыми" rows="1"></textarea>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Сгенерировать отзыв</button>
+        </div>
+    </form>
+
+    {% if review %}
+        <div class="result">
+            <h2>Сгенерированный отзыв:</h2>
+            <p class="generated-text">{{ review }}</p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}
